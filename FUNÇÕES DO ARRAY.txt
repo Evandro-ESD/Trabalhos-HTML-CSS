@@ -1,0 +1,78 @@
+-- - --- Funções do array (métodos) ------------
+- push - Insere valor  no final do array
+- pop - Remover último valor do array
+-- Adicionar valor arrai[x] = 50;
+- shift - Remover o primeiro valor do array
+- map - Percorrer o array e criar uma lista duplicada
+- length - contar elementos do array
+- splice - Pode apagar um elemento a partir do índice, e inserir elementos
+- split - tratara a string - desmembrar, separar, etc..
+foreach - Método de array (laço percorre todo array)
+Outras funções:
+- sort
+- rest - function x (...x) - juntar varios elementos em um array 
+- spread - (...) é usado para espalhar os elementos de um array
+
+-- Objetos - 
+-- Recursão - 
+
+- crud objeto
+====================================programa crud============================
+//sistema de crud com objetos e array
+let pessoa = {
+    nome: "Julio",
+    idade: 25,
+    cpf: 21425411245
+}
+
+let pessoas = []
+//função criar uma nova pessoa 
+function criarPessoa(n, i, c) {
+    const pessoa = {
+        nome: n,
+        idade: i,
+        cpf: c
+    }
+    pessoas.push(pessoa)
+    console.log(`Pessoa adicionada: ${n}, ${i} anos, ${c}`)
+}
+//função listar todas as pessoas
+function listarPessoas() {
+    console.log("\n Lista de pessoas:")
+    pessoas.forEach((valor, indice) => {
+        console.log(`${indice}: ${valor.nome} -  ${valor.idade} anos, ${valor.cpf}`)
+    })
+}
+//Função para atualizar uma pessoa
+function atualizarPessoa(indice, novoNome, novaIdade, novaCpf) {
+    if (pessoas[indice]){
+            pessoas[indice].nome = novoNome;
+            pessoas[indice].idade = novaIdade;
+            pessoas[indice].cpf = novaCpf;
+            console.log(`pessoa atualizada no índice: ${indice}`)
+        }
+        else
+            {
+                console.log("ìndice inválido!")
+            }
+}
+//Função para excluir uma pessoa
+function excluirPessoa(indice){
+    if(pessoas[indice]){
+        const removida = pessoas.splice(indice, 1)
+        console.log(`Pessoa renovida: ${removida[0].nome}`)
+    }
+    else{
+        console.log("Índice inválido!")
+    }
+}
+//============testes================
+criarPessoa("Santos", 20, 21441225485)
+criarPessoa("Marildo", 50, 23541225485)
+criarPessoa("Santos", 20, 21441225485)
+
+listarPessoas()
+atualizarPessoa(2, "Chapolin", 20, 21452414785)
+listarPessoas()
+excluirPessoa(2)
+listarPessoas()
