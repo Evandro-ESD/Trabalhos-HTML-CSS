@@ -156,6 +156,17 @@ exercicio_07 = () => {
 
 // 8) Desenvolver um programa que pergunte um número inteiro qualquer e verifique se ele está 
 // na faixa de 1 a 10.
+exercicio_08 = () => {
+    let resposta08 = document.querySelector("#resposta-ex08")
+    const numero = Number(prompt(`Informe um valor numérico inteiro qualquer:  `))
+    if (isNaN(numero)) {
+        alert(`Entrada inválida insira apenas números!`)
+        return
+    }
+    let resultado = numero >= 0 && numero <= 10
+
+    resposta08.textContent = `O valor > ${numero} <  ${resultado ? "está" : "não está"} na faixa de 1 a 10. `
+}
 
 
 // 9) Desenvolver um programa que pergunte um número e exiba a informação de que ele é 
