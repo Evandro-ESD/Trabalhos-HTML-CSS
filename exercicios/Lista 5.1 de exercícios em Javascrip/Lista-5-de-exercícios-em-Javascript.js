@@ -72,8 +72,6 @@ tabela = (num) => {
 }
 // tabela(6)
 
-
-
 // 6) Desenvolver um programa que leia um número n qualquer menor ou igual a 50 e apresente
 // o valor obtido da multiplicação sucessiva de n por 3 enquanto o produto for menor que 250.
 // (n x 3; n x 3 x 3; n x 3 x 3 x 3 etc...).
@@ -90,6 +88,7 @@ multiplicaçãoSucessiva = (num) => {
     }
 }
 // multiplicaçãoSucessiva(50)
+
 // 7) Desenvolver um programa que apresente todos os números divisíveis por 4 que sejam
 // menores que 200. Para saber se o número é divisível por 4 será necessário verificar a lógica
 // desta condição com o comando if. Sendo divisível, mostre-o; não sendo, passe para o próximo
@@ -179,13 +178,11 @@ potencia = (b, e) => {
 
 // 13) Desenvolver um programa que imprima a tabuada de 3 a 6.
 tabuada_3_6 = () => {
-    console.log(`Tabuada do 3: `)
-    for (let i = 1; i <= 10; i++) {
-        console.log(`3 x ${i} = ${3 * i}`)
-    }
-    console.log(`Tabuada do 6: `)
-    for (let i = 1; i <= 10; i++) {
-        console.log(`6 x ${i} = ${6 * i}`)
+    for (let t = 3; t <= 6; t++) {
+        console.log(`Tabuada do ${t}: `)
+        for (let i = 1; i <= 10; i++) {
+            console.log(`${t} x ${i} = ${t*i}`)
+        }
     }
 }
 // tabuada_3_6()
