@@ -23,7 +23,6 @@ conta = () => {
     // alert(`Funciona!!`)
 }
 
-
 // 2. Desenvolver um programa que faça duas perguntas: o valor referente às horas atuais e 
 // o valor referente aos minutos atuais. Exemplo, se agora são 09:35h o usuário deverá 
 // informar como resposta às horas atuais o valor 09 e como resposta aos minutos atuais 
@@ -154,7 +153,7 @@ prestacoes = () => {
     }
     let valor_parcela = valor / prestacao
     const resposta_07 = document.querySelector("#resposta_07")
-    resposta_07.value = `Valor parcela: ${valor_parcela}`
+    resposta_07.value = `Valor parcela: ${valor_parcela.toFixed(2)}`
     alert(`Valor da presatação R$${valor_parcela.toFixed(2).replace(" ", "0")}`)
 
 }
@@ -181,7 +180,7 @@ valor_de_venda = () => {
 // 9. Faça um algoritmo que leia a idade de uma pessoa expressa em anos, meses e dias e
 // mostre-a expressa apenas em dias. Obs: Considere os anos com 365 dias e os meses
 // com 30 dias.
-idade_em_dias = ()=>{
+idade_em_dias = () => {
     let idadeanos = Number(prompt(`Informe a idade em anos: `))
     verifica_se_num(idadeanos)
     let idademeses = Number(prompt(`Informe a idade em meses: `))
@@ -189,7 +188,7 @@ idade_em_dias = ()=>{
     let idadedias = Number(prompt(`Informe a idade em dias: `))
     verifica_se_num(idadedias)
 
-    let mostraIdadeEmDias = `${(idadeanos*365) + (idademeses*30) + (idadedias)}`
+    let mostraIdadeEmDias = `${(idadeanos * 365) + (idademeses * 30) + (idadedias)}`
 
     alert(`Sua idade em dias: ${mostraIdadeEmDias}`)
 
@@ -198,12 +197,30 @@ idade_em_dias = ()=>{
 // 10. Escreva um algoritmo pergunte o número total de eleitores de um município, o
 // número de votos brancos, nulos e válidos e apresente como resposta o percentual que
 // cada um representa em relação ao total de eleitores.
-percentual_eleitores = ()=>{
+percentual_eleitores = () => {
     const n_eleitores = Number(prompt(`Informe número de eleitoes: `))
-    const n_brancos = Number(prompt(`Informe número de eleitoes: `))
-    const n_nulos = Number(prompt(`Informe númedro de eleitoes: `))
+    const n_brancos = Number(prompt(`Informe número de votos brancos: `))
+    const n_nulos = Number(prompt(`Informe númedro de votos nulos: `))
     const n_validos = Number(prompt(`Informe número de votos válidos: `))
-}
+
+    
+    const total_votos = n_brancos+n_nulos+n_validos
+    if(total_votos !== n_eleitores){
+        alert(`Números de votos não corresponde ao números de eleitores`)
+    }else{
+        const percentual_brancos = (n_brancos / n_eleitores) * 100
+        const percentual_nulos = (n_nulos / n_eleitores) * 100
+        const percentual_validos = (n_validos / n_eleitores) * 100
+        
+    const resposta10 = document.querySelector("#resposta_10")
+    resposta10.value = `Percentual votos em branco: ${percentual_brancos}%`
+
+    const resposta10_2 = document.querySelector("#resposta_10-2")
+    resposta10_2.value = `Percentual votos em nulos: ${percentual_nulos}%`
+
+    const resposta10_3 = document.querySelector("#resposta_10-3")
+    resposta10_3.value = `Percentual votos em válidos: ${percentual_validos}%`
+}}
 
 
 // DICAS ÚTEIS:
