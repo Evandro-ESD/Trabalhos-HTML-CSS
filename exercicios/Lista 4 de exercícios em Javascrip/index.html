@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      margin: 0;
+      padding-left: 250px;
+    }
+
+    .container-exercicios {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1em;
+      justify-items: center;
+      align-items: center;
+      margin: 2em 0;
+    }
+
+    .box-btn-res {
+      border: 1px solid red;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1em;
+      background: #222;
+      border-radius: 10px;
+    }
+
+    button {
+      height: 2em;
+      width: 10em;
+      border-radius: 10px;
+      font-size: 20px;
+      color: antiquewhite;
+      background-color: black;
+      font-family: monospace;
+      font-size: xx-large;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+    }
+
+    h4 {
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      font-style: italic;
+    }
+
+    .caixa-resposta {
+      min-height: 10em;
+      max-height: 20em;
+      width: 300px;
+      border-radius: 10px;
+      font-size: 14px;
+      color: #222;
+      background-color: #fff;
+      font-family: monospace;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 0.5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+  <title>Lista 4 de exercícios em Javascrip</title>
+</head>
+
+<body>
+  <h1>Lista 4 de exercícios em Javascrip</h1>
+
+  <section class="container-exercicios">
+    <div class="box-btn-res">
+      <button onclick="exercicio_01()">Exercício 01</button>
+      <h4>Mostra número</h4>
+      <!-- Resposta aparecerá nessa div -->
+      <div class="caixa-resposta">
+        <p id="resposta-ex01"></p><!-- Resposta aparecerá aqui -->
+      </div>
+    </div>
+
+
+    <div class="box-btn-res">
+      <button onclick="cap_brasil()">Exercício 02</button>
+      <h4>Capital do brasil</h4>
+      <!-- Resposta aparecerá nessa div -->
+      <div class="caixa-resposta">
+        <p id="resposta-ex02"></p><!-- Resposta aparecerá aqui -->
+      </div>
+    </div>
+
+
+    <div class="box-btn-res">
+      <button onclick="exercicio_03()">Exercício 03</button>
+      <h4>Par ou Ímpar</h4>
+      <!-- Resposta aparecerá nessa div -->
+      <div class="caixa-resposta">
+        <p id="resposta-ex03"></p><!-- Resposta aparecerá aqui -->
+      </div>
+    </div>
+
+
+    <div class="box-btn-res">
+      <button onclick="exercicio_04()">Exercício 04</button>
+      <h4>Valor não é divisível por 4 e 5</h4>
+      <!-- Resposta aparecerá nessa div -->
+      <div class="caixa-resposta">
+        <p id="resposta-ex04"></p><!-- Resposta aparecerá aqui -->
+      </div>
+    </div>
+
+
+    <div class="box-btn-res">
+      <button onclick="exercicio_05()">Exercício 05</button>
+      <h4>aprovação ou reprovação</h4>
+      <!-- Resposta aparecerá nessa div -->
+      <div class="caixa-resposta">
+        <p id="resposta-ex05"></p><!-- Resposta aparecerá aqui -->
+      </div>
+    </div>
+
+
+    <div class="box-btn-res">
+      <button onclick="exercicio_06()">Exercício 06</button>
+      <h4>Titulo do exercicio</h4>
+      <!-- Resposta aparecerá nessa div -->
+      <div class="caixa-resposta">
+        <p id="resposta-ex06"></p><!-- Resposta aparecerá aqui -->
+      </div>
+    </div>
+
+
+    <div class="box-btn-res">
+      <button onclick="exercicio_07()">Exercício 07</button>
+      <h4>Titulo do exercicio</h4>
+      <!-- Resposta aparecerá nessa div -->
+      <div class="caixa-resposta">
+        <p id="resposta-ex07"></p><!-- Resposta aparecerá aqui -->
+      </div>
+    </div>
+
+
+    <div class="box-btn-res">
+      <button onclick="exercicio_08()">Exercício 08</button>
+      <h4>Titulo do exercicio</h4>
+      <!-- Resposta aparecerá nessa div -->
+      <div class="caixa-resposta">
+        <p id="resposta-ex08"></p><!-- Resposta aparecerá aqui -->
+      </div>
+    </div>
+
+
+    <div class="box-btn-res">
+      <button onclick="exercicio_09()">Exercício 09</button>
+      <h4>Titulo do exercicio</h4>
+      <!-- Resposta aparecerá nessa div -->
+      <div class="caixa-resposta">
+        <p id="resposta-ex09"></p><!-- Resposta aparecerá aqui -->
+      </div>
+    </div>
+
+    <div class="box-btn-res">
+      <button onclick="exercicio_10()">Exercício 10</button>
+      <h4>Titulo do exercicio</h4>
+      <!-- Resposta aparecerá nessa div -->
+      <div class="caixa-resposta">
+        <p id="resposta-ex10"></p><!-- Resposta aparecerá aqui -->
+      </div>
+    </div>
+
+  </section>
+
+  <script src="lista_4.js"></script>
+</body>
+
+</html>

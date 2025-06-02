@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding-left: 250px;
+}
+.box-btn {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    justify-items: center;
+    align-items: center;
+    margin: 2em 0;
+}
+    .box-btn-res {
+        border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1em;
+        background: #222;
+        border-radius: 10px;
+    }
+    button {
+        height: 2em;
+        width: 10em;
+        border-radius: 10px;
+        font-size: 20px;
+        color: antiquewhite;
+        background-color: black;
+        font-family: monospace;
+        font-size: xx-large;
+        font-weight: bold;
+        margin-bottom: 0.5em;
+    }
+.resposta {
+    height: 2em;
+    width: 300px;         /* largura fixa */
+    border-radius: 10px;
+    font-size: 14px;      /* diminua só o tamanho da fonte */
+    color: #222;
+    background-color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0.5em;
+}
+    .conversor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+    padding: 1.5em;
+    background: #222;
+    border-radius: 10px;
+    color: #fff;
+    min-width: 320px;
+    max-width: 400px;
+    box-shadow: 0 2px 8px #0002;
+}
+.conversor input,
+.conversor select {
+    margin: 0.5em 0;
+    padding: 0.5em;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+.conversor p {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+</style>
+<title>Lista 1 de exercícios em Javascrip</title>
+</head>
+
+<body>
+<h1>Lista 1 de exercícios em Javascrip</h1>
+
+<div class="box-btn">
+    <div class="box-btn-res">
+        <button onclick="nome()">Exercício 01</button>
+        <input class="resposta" type="text" placeholder="Resposta" />
+    </div>
+    <div class="box-btn-res">
+        <button onclick="fourValues()">Exercício 02</button>
+        <input id="resposta_02" class="resposta" type="text" placeholder="Resposta" />
+    </div>
+    <div class="box-btn-res">
+        <button onclick="conversor()">Conversor</button>
+        <input id="" class="resposta" type="text" placeholder="Resposta" />
+    </div>
+
+    <div class="box-btn-res">
+        <button onclick="numero()">Exercício 03</button>
+        <input id="resposta_03" class="resposta" type="text" placeholder="Resposta" />
+    </div>
+    <div class="box-btn-res">
+        <button onclick="salario()">Exercício 04</button>
+        <input id="resposta_04" class="resposta" type="text" placeholder="Resposta" />
+    </div>
+    <div class="box-btn-res">
+        <button onclick="converter()">Exercício 05</button>
+        <input id="resposta_05" class="resposta" type="text" placeholder="Resposta" />
+    </div>
+    <div class="box-btn-res">
+        <button onclick="media_aritmetica()">Exercício 06</button>
+        <input id="resposta_06" class="resposta" type="text" placeholder="Resposta" />
+    </div>
+    <div class="box-btn-res">
+        <button onclick="verifica_litros()">Exercício 07</button>
+        <input id="resposta_07" class="resposta" type="text" placeholder="Resposta" />
+    </div>
+    <div class="box-btn-res">
+        <button onclick="calcular_potencia_raiz()">Exercício 08</button>
+        <input id="resposta_08" class="resposta" type="text" placeholder="Resposta" />
+    </div>
+    <div class="box-btn-res">
+        <button onclick="verifica_atraso()">Exercício 09</button>
+        <input id="resposta_09" class="resposta" type="text" placeholder="Resposta" />
+    </div>
+</div>
+
+<!-- <div class="conversor">
+    <p id="converter_moedas" style="cursor: pointer; border: 1px solid rgb(139, 137, 137); background-color: #4f4747; width: 100px; height: 20px; text-align: center; padding: 10px; border-radius: 10px; box-shadow: 1px 1px 10px 3px white;" onclick="converter_moedas()">Converter</p>
+    <div style="display: flex; gap: 0.5em; align-items: center; margin-bottom: 0.5em;">
+        <span>1</span>
+        <span>Dólar americano</span>
+    </div>
+    <div style="display: flex; gap: 0.5em; align-items: center; margin-bottom: 1em;">
+        <span>5,70</span>
+        <span>REAL</span>
+    </div>
+    <div style="display: flex; gap: 0.5em; align-items: center; margin-bottom: 0.5em;">
+        <input id="num1" type="number" />
+        <select>
+            <option value="">Dólar americano</option>
+        </select>
+    </div>
+    <div style="display: flex; gap: 0.5em; align-items: center;">
+        <input id="num2" type="number" value="5.70"/>
+        <select>
+            <option value="5.70">Real Brasileiro</option>
+        </select>
+    </div>
+</div> -->
+
+<script src="lista01.js"></script>
+</body>
+</html>
