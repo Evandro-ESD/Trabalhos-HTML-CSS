@@ -32,11 +32,11 @@ is_nan = (valor) => {
 // Obs: A fórmula da área é a = πr². Considere o valor de π = 3. 14159265.
 calc_area = () => {
     rl.question("Qual raio do circulo: ", (raio) => {
-        console.log('Área do circulo é: ', (3.14159265 * (Math.pow(raio, 2)))) //Math.PI
+        console.log('Área do circulo é: ', (3.14159265 * (Math.pow(raio, 2))).toFixed(2)) //Math.PI
         rl.close()
     })
 }
-// calc_area()
+calc_area()
 
 // 2) Desenvolver um programa que calcule o salário líquido de um professor. Para elaborar o
 // programa, é necessário possuir alguns dados, tais como: Valor da hora aula, número de horas
@@ -275,4 +275,4 @@ pa_quinto_termo = () => {
         })
     })
 };
-pa_quinto_termo()
+// pa_quinto_termo()
