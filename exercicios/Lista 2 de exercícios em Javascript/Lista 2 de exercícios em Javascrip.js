@@ -83,7 +83,6 @@ imc = () => {
     // alert(`Seu IMC é : ${imc}`)
     let resposta_04 = document.querySelector('#resposta_04')
     resposta_04.value = `Seu IMC é : ${imc.toFixed(2)}`
-
 }
 
 // 5. Fazer um algoritmo que pergunte dois números e ao final apresente os seguintes 
@@ -154,7 +153,7 @@ prestacoes = () => {
     const resposta_07 = document.querySelector("#resposta_07")
     resposta_07.value = `Valor parcela: ${valor_parcela.toFixed(2)}`
     alert(`Valor da presatação R$${valor_parcela.toFixed(2).replace(" ", "0")}`)
-
+    
 }
 
 // 8. Fazer um algoritmo que receba o preço de custo de um produto e mostre como
@@ -164,27 +163,28 @@ valor_de_venda = () => {
     const produto = Number(prompt(`Valor do produto:`))
     verifica_se_num(produto)
     const perc_venda = Number(prompt(`Percentual de venda entre 0% e 99%:`))
-    verifica_se_num(tx_venda)
+    verifica_se_num(perc_venda)
     if (perc_venda < 0 || perc_venda > 99) {
         alert(`Informe um percentual "%" valido!`)
         return
     }
     let tx_venda = (perc_venda / 100)
 
-    let venda = produto * tx_venda
+    let venda = (produto * tx_venda) + produto
 
-    alert(`Valor da venda: ${venda}, ${tx_venda}`)
+    let resposta_08 = document.querySelector('#resposta_08')
+    resposta_08.value = `Valor da venda: R$ ${venda.toFixed(2)}`
 }
 
 // 9. Faça um algoritmo que leia a idade de uma pessoa expressa em anos, meses e dias e
 // mostre-a expressa apenas em dias. Obs: Considere os anos com 365 dias e os meses
 // com 30 dias.
 idade_em_dias = () => {
-    let idadeanos = Number(prompt(`Informe a idade em anos: `))
+    let idadeanos = Number(prompt(`Informe a idade somente os anos: `))
     verifica_se_num(idadeanos)
-    let idademeses = Number(prompt(`Informe a idade em meses: `))
+    let idademeses = Number(prompt(`Informe a idade somente os meses: `))
     verifica_se_num(idademeses)
-    let idadedias = Number(prompt(`Informe a idade em dias: `))
+    let idadedias = Number(prompt(`Informe a idade somente os dias: `))
     verifica_se_num(idadedias)
 
     let mostraIdadeEmDias = `${(idadeanos * 365) + (idademeses * 30) + (idadedias)}`
