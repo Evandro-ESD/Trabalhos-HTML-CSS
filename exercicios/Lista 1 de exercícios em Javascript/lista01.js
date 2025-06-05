@@ -118,7 +118,6 @@ verifica_litros = () => {
 
     let resposta_07 = document.getElementById('resposta_07')
     resposta_07.value = `Previsão de consumo: ${(consumo_medio).toFixed(1)} litros`
-
 }
 
 // 8. Fazer um algoritmo que pergunte 1 número e apresente:
@@ -142,7 +141,6 @@ verifica_atraso = () => {
     let resposta_09 = document.querySelector('#resposta_09')
     resposta_09.value = `Prestação ficará em R$${prestacao.toFixed(2)} `
 }
-
 
 // DICAS ÚTEIS:
 // Potência:

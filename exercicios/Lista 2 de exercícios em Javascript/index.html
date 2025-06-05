@@ -1,176 +1,194 @@
 <!DOCTYPE html>
 <html lang="br">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Lista 1 de exercícios em Javascrip</title>
-<style>
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh;
-    margin: 0;
-    padding-left: 250px;
-}
-.box-btn {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1em;
-    justify-items: center;
-    align-items: center;
-    margin: 2em 0;
-}
-    .box-btn-res {
-        border: 1px solid red;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 1em;
-        background: #222;
-        border-radius: 10px;
-    }
-    button {
-        height: 2em;
-        width: 10em;
-        border-radius: 10px;
-        font-size: 20px;
-        color: antiquewhite;
-        background-color: black;
-        font-family: monospace;
-        font-size: xx-large;
-        font-weight: bold;
-        margin-bottom: 0.5em;
-    }
-    #container{
-        height: 5em;
-        overflow-x: auto;
-        width: 100%;         /* largura fixa */
-        border-radius: 10px;
-        font-size: 14px;      /* diminua só o tamanho da fonte */
-        color: #222;
-        background-color: #fff;
-        font-family: monospace;
-        font-weight: bold;
-        text-align: center;
-        margin-top: 0.5em;
 
-    }
-.resposta, container {
-    height: 5em;
-    overflow-x: auto;
-    width: 100%;         /* largura fixa */
-    border-radius: 10px;
-    font-size: 14px;      /* diminua só o tamanho da fonte */
-    color: #222;
-    background-color: #fff;
-    font-family: monospace;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 0.5em;
-}
-.resposta.um{
-    height: 2em;
-    overflow-x: auto;
-    width: 100%;         /* largura fixa */
-    border-radius: 10px;
-    font-size: 14px;      /* diminua só o tamanho da fonte */
-    color: #222;
-    background-color: #fff;
-    font-family: monospace;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 0.5em;
-}
-    .conversor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2em;
-    padding: 1.5em;
-    background: #222;
-    border-radius: 10px;
-    color: #fff;
-    min-width: 320px;
-    max-width: 400px;
-    box-shadow: 0 2px 8px #0002;
-}
-.conversor input,
-.conversor select {
-    margin: 0.5em 0;
-    padding: 0.5em;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 1em;
-}
-.conversor p {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 1em;
-}
-</style>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista 1 de exercícios em Javascrip</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            margin: 0;
+            padding-left: 250px;
+        }
+
+        .box-btn {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1em;
+            justify-items: center;
+            align-items: center;
+            margin: 2em 0;
+        }
+
+        .box-btn-res {
+            border: 1px solid red;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1em;
+            background: #222;
+            border-radius: 10px;
+        }
+
+        button {
+            height: 2em;
+            width: 10em;
+            border-radius: 10px;
+            font-size: 20px;
+            color: antiquewhite;
+            background-color: black;
+            font-family: monospace;
+            font-size: xx-large;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+
+        #container {
+            height: 5em;
+            overflow-x: auto;
+            width: 100%;
+            /* largura fixa */
+            border-radius: 10px;
+            font-size: 14px;
+            /* diminua só o tamanho da fonte */
+            color: #222;
+            background-color: #fff;
+            font-family: monospace;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 0.5em;
+
+        }
+
+        .resposta,
+        container {
+            height: 5em;
+            overflow-x: auto;
+            width: 100%;
+            /* largura fixa */
+            border-radius: 10px;
+            font-size: 14px;
+            /* diminua só o tamanho da fonte */
+            color: #222;
+            background-color: #fff;
+            font-family: monospace;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 0.5em;
+        }
+
+        .resposta.um {
+            height: 2em;
+            overflow-x: auto;
+            width: 100%;
+            /* largura fixa */
+            border-radius: 10px;
+            font-size: 14px;
+            /* diminua só o tamanho da fonte */
+            color: #222;
+            background-color: #fff;
+            font-family: monospace;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 0.5em;
+        }
+
+        .conversor {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2em;
+            padding: 1.5em;
+            background: #222;
+            border-radius: 10px;
+            color: #fff;
+            min-width: 320px;
+            max-width: 400px;
+            box-shadow: 0 2px 8px #0002;
+        }
+
+        .conversor input,
+        .conversor select {
+            margin: 0.5em 0;
+            padding: 0.5em;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+
+        .conversor p {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 1em;
+        }
+    </style>
 
 </head>
 
 <body>
-<h1>Lista 1 de exercícios em Javascrip</h1>
+    <h1>Lista 1 de exercícios em Javascrip</h1>
 
-<div class="box-btn">
-    <div class="box-btn-res">
-        <button onclick="conta()">Exercício 01</button>
-        <input id="resposta_01" class="resposta" type="text" placeholder="Resposta" />
-    </div>
-    <div class="box-btn-res">
-        <button onclick="tempo_passado()">Exercício 02</button>
-        <div id="container"></div>
-        <!-- <input id="resposta_02" class="resposta" type="text" placeholder="Resposta" /> -->
-    </div>
-    <div class="box-btn-res">
-        <button onclick="converter()">Exercício 03</button>
-        <input id="resposta_03" class="resposta" type="text" placeholder="Resposta" />
-    </div>
-    <div class="box-btn-res">
-        <button onclick="imc()">Exercício 04</button>
-        <input id="resposta_04" class="resposta" type="text" placeholder="Resposta" />
-    </div>
-    <div class="box-btn-res">
-        <button onclick="somados_dois_numeros()">Exercício 05</button>
-        <input id="resposta_05"    class="resposta um" type="text" placeholder="Resposta" />
-        <input id="resposta_05a"   class="resposta um" type="text" placeholder="Resposta" />
-        <input id="resposta_05b"   class="resposta um" type="text" placeholder="Resposta" />
-        <input id="resposta_05c"   class="resposta um" type="text" placeholder="Resposta" />
-        <input id="resposta_05d"   class="resposta um" type="text" placeholder="Resposta" />
-        <input id="resposta_05e"   class="resposta um" type="text" placeholder="Resposta" />
-        
-    </div>
-    <div class="box-btn-res">
-        <button onclick="salrario_vendedor()">Exercício 06</button>
-        <input id="resposta_06" class="resposta" type="text" placeholder="Resposta" />
-    </div>
-    <div class="box-btn-res">
-        <button onclick="prestacoes()">Exercício 07</button>
-        <input id="resposta_07" class="resposta" type="text" placeholder="Resposta" />
-    </div>
-    <div class="box-btn-res">
-        <button onclick="valor_de_venda()">Exercício 08</button>
-        <input id="resposta_08" class="resposta" type="text" placeholder="Resposta" />
-    </div>
-    <div class="box-btn-res">
-        <button onclick="idade_em_dias()">Exercício 09</button>
-        <input id="resposta_09" class="resposta" type="text" placeholder="Resposta" />
-    </div>
-    <div class="box-btn-res">
-        <button onclick="percentual_eleitores()">Exercício 10</button>
-        <input id="resposta_10" class="resposta" type="text" placeholder="Resposta" />
-        <input id="resposta_10-2" class="resposta" type="text" placeholder="Resposta" />
-        <input id="resposta_10-3" class="resposta" type="text" placeholder="Resposta" />
-    </div>
-</div>
+    <div class="box-btn">
+        <div class="box-btn-res">
+            <button onclick="conta()">Exercício 01</button>
+            <input id="resposta_01" class="resposta" type="text" placeholder="Resposta" />
+        </div>
+        <div class="box-btn-res">
+            <button onclick="tempo_passado()">Exercício 02</button>
+            <div id="container"></div>
+            <!-- <input id="resposta_02" class="resposta" type="text" placeholder="Resposta" /> -->
+        </div>
+        <div class="box-btn-res">
+            <button onclick="converter()">Exercício 03</button>
+            <input id="resposta_03" class="resposta" type="text" placeholder="Resposta" />
+        </div>
+        <div class="box-btn-res">
+            <button onclick="imc()">Exercício 04</button>
+            <input id="resposta_04" class="resposta" type="text" placeholder="Resposta" />
+        </div>
+        <div class="box-btn-res">
+            <button onclick="somados_dois_numeros()">Exercício 05</button>
+            <input id="resposta_05" class="resposta um" type="text" placeholder="Resposta" />
+            <input id="resposta_05a" class="resposta um" type="text" placeholder="Resposta" />
+            <input id="resposta_05b" class="resposta um" type="text" placeholder="Resposta" />
+            <input id="resposta_05c" class="resposta um" type="text" placeholder="Resposta" />
+            <input id="resposta_05d" class="resposta um" type="text" placeholder="Resposta" />
+            <input id="resposta_05e" class="resposta um" type="text" placeholder="Resposta" />
 
-<script src="Lista 2 de exercícios em Javascrip
+        </div>
+        <div class="box-btn-res">
+            <button onclick="salrario_vendedor()">Exercício 06</button>
+            <input id="resposta_06" class="resposta" type="text" placeholder="Resposta" />
+        </div>
+        <div class="box-btn-res">
+            <button onclick="prestacoes()">Exercício 07</button>
+            <input id="resposta_07" class="resposta" type="text" placeholder="Resposta" />
+        </div>
+        <div class="box-btn-res">
+            <button onclick="valor_de_venda()">Exercício 08</button>
+            <input id="resposta_08" class="resposta" type="text" placeholder="Resposta" />
+        </div>
+        <div class="box-btn-res">
+            <button onclick="idade_em_dias()">Exercício 09</button>
+            <input id="resposta_09" class="resposta" type="text" placeholder="Resposta" />
+        </div>
+        <div class="box-btn-res">
+            <button onclick="percentual_eleitores()">Exercício 10</button>
+            <input id="resposta_10" class="resposta" type="text" placeholder="Resposta" />
+            <input id="resposta_10-2" class="resposta" type="text" placeholder="Resposta" />
+            <input id="resposta_10-3" class="resposta" type="text" placeholder="Resposta" />
+        </div>
+    </div>
+
+    <script src="Lista 2 de exercícios em Javascrip
 .js"></script>
 </body>
+
 </html>
