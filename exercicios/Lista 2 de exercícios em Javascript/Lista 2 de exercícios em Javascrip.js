@@ -41,16 +41,15 @@ tempo_passado = () => {
         alert(`Entrada para minutos inválida: ${minutos}`)
         return
     }
-    let hora_referencia = Number(0)
-    let minutos_referencia = Number(0)
-    let horaAtual = `Hora atual: ${horas}:${minutos} |\n`
-    let tempo_passado = `Se passaram ${hora_referencia + horas} horas e ${(minutos_referencia + minutos)} minutos`
+    let horaParaMuinutos = horas * 60
+    let minutosTotais = minutos + horaParaMuinutos
+
     // alert(`${horaAtual}${tempo_passado}`)
     let resposta_02 = document.querySelector('#container')
     // resposta_02.value = `${horaAtual}${tempo_passado}`
     // resposta_02.value = `${tempo_passado}`
 
-    resposta_02.innerHTML = `<div style="white-space: normal; word-break: break-word;"> ${horaAtual}${tempo_passado}</div>`;
+    resposta_02.innerHTML = `<div style="white-space: normal; word-break: break-word;"> Se passaram ${minutosTotais} minutos</div>`;
 }
 
 
