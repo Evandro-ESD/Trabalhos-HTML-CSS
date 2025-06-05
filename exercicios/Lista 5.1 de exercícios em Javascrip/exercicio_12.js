@@ -27,7 +27,7 @@ function perguntarNumero() {
             } else {
                 const maior = Math.max(...numeros);
                 const menor = Math.min(...numeros);
-                const soma = numeros.reduce((total, n) => total + n, 0);
+                const soma  = numeros.reduce((total, n) => total + n, 0);
                 const media = soma / numeros.length;
 
                 console.log(`\nResultado final:`);

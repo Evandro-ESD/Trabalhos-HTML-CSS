@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Imagens</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            padding-top: 90px;
+            padding-bottom: 45px;
+            text-align: center;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 100px;
+            background-color: #acaf50;
+            color: white;
+            font-size: 24px;
+            line-height: 60px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            background-color: #333;
+            color: white;
+            line-height: 40px;
+            font-size: 14px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            width: 900px;
+            margin: 0 auto;
+            background: #0000;
+            padding: 20px;
+            border-radius: 28px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            /* para contar o floats */
+            overflow: hidden;
+        }
+
+        .item {
+            width: 290;
+            height: 290;
+            background: #0d09e748;
+            margin: 0 15px 20px 0;
+            float: left;
+            border-radius: 20px;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+            /* transformação (zoom) acontece em 0.3 seguindos */
+            transition: transform 1.3s ease-in-out;
+        }
+
+        .item img {
+            width: 250px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 2px solid #4cf504;
+            margin-bottom: 10px;
+        }
+        /*  todo bloco aumenta 5% com a transição suave*/
+
+        .item:hover{
+            transform: scale(1.05);
+        }
+        .item h3{
+            color: #4cf504;
+            font-size: 19px;
+            margin: 0;
+        }
+        .item:nth-child(3n){
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- cabeçalho -->
+    <header>
+        <h1>Cabeçalho fixo</h1>
+
+    </header>
+    <!-- Bloco -->
+    <div class="container">
+        <h2>Galeria estatica de Imagens</h2>
+        <p>Aqui estão algumas imagems dentro de div's alinhadas por três colunas</p>
+
+        <div class="item">
+            <h3>imagem 1</h3>
+            <img src="/aula 01/imagem-exemplo/imagem1.jpg" alt="" >
+        </div>
+        
+        <div class="item">
+            <h3>imagem 2</h3>
+            <img src="/aula 01/imagem-exemplo/imagem2.jpg" alt="" ">
+        </div>
+        
+        <div class="item">
+            <h3>imagem 3</h3>
+            <img src="/aula 01/imagem-exemplo/imagem3.jpg" alt="" s>
+        </div>
+        
+        <div class="item">
+            <h3>imagem 4</h3>
+            <img src="/aula 01/imagem-exemplo/imagem4.jpg" alt="" >
+        </div>
+        
+        <div class="item">
+            <h3>imagem 5</h3>
+            <img src="/aula 01/imagem-exemplo/imagem5.jpg" alt="">
+        </div>
+        
+        <div class="item">
+            <h3>imagem 6</h3>
+            <img src="/aula 01/imagem-exemplo/imagem6.jpg" alt="" >
+        </div>
+
+
+
+    </div>
+    <!-- Rodapé -->
+    <footer>
+        &copy; 2025 Meu Projeto
+        | Todos os direitos reservados.
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anúncio Smart TV</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgba(250, 235, 215, 0.274);
+            text-align: center;
+        }
+
+        h1 {
+            font-family: "Trirong", serif;
+        }
+
+        img {
+            width: 400px;
+        }
+
+        figure {
+            background: rgba(139, 228, 255, 0.233);
+            ;
+            border: 1px solid rgba(139, 228, 255, 0.4);
+            border-radius: 12px;
+        }
+
+        figcaption {
+            font-style: italic;
+            font-size: 12px;
+            font-family: "Audiowide", sans-serif;
+            ;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        hr {
+            /* background-color: black; */
+            border: 1px solid rgb(68, 68, 68);
+            width: 60%;
+        }
+
+        h3 {
+            margin: 0;
+            padding: 0;
+            top: -100px;
+        }
+
+        dl.dropdown {
+            margin: 10px auto;
+            /* Centraliza horizontalmente */
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 10px;
+            width: 300px;
+            text-align: left;
+            /* Garante que o texto fique alinhado à esquerda dentro do box */
+        }
+
+        dt {
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 5px;
+            background: #f0f0f0;
+            padding: 5px;
+            border-radius: 4px;
+        }
+
+        dd {
+            display: none;
+            margin-left: 15px;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+
+        .dropdown.open dd {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Smart TV 75" da marca XYZ</h1>
+    </header>
+    <section>
+        <figure>
+            <img src="./imagem/imagem-smart-tv.png" alt="Smart TV">
+            <figcaption><strong>Smart TV da marca XYZ</strong></figcaption>
+        </figure>
+        <a href="#" target="_blank" rel="noopener noreferrer">Quero comprar agora mesmo!</a>
+        <div>
+            <h2>Preço</h2>
+            <p><em>R$ 4.999 ou 12xR$ 416,58</em></p>
+            <p><strong> Desconto de 10%</strong> no PIX</p>
+        </div>
+        <hr>
+        <h3>Condições</h3>
+        <p>Parcelamento <i>sem juros</i></p>
+        <p><em>Frete grátis</em></p>
+        <hr>
+        <h3>Características</h3>
+        <dl class="dropdown">
+            <dt>Inteligência Artificial & Smart</dt>
+            <dd>Alexa
+            <dd>Google Assistente
+            <dd>Game Optimizer</dd>
+            <dd>Configuração da família</dd>
+        </dl>
+        <dl class="dropdown">
+            <dt>Imagem</dt>
+            <dd>4K UHD</dd>
+            <dd>Processador XYZ</dd>
+            <dd>HDR</dd>
+            <dd> HDMI 2.0</dd>
+        </dl>
+        <dl class="dropdown">
+            <dt>Conexões</dt>
+            <dd>3 Entradas HDMI 2.0</dd>
+            <dd>2 Entradas USB</dd>
+            <dd>1 Bluetooth In/Out</dd>
+            <dd>1 Saída digital óptica</dd>
+
+        </dl>
+    </section>
+    <script>
+        document.querySelectorAll("dl.dropdown dt").forEach(dt => {
+            dt.addEventListener("click", () => {
+                const parent = dt.parentElement;
+                parent.classList.toggle("open");
+            });
+        });
+    </script>
+</body>
+
+</html>

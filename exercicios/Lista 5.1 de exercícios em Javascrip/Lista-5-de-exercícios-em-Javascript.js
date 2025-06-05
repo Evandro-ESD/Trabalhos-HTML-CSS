@@ -40,7 +40,6 @@ function cem_a_um() {
 function quadrados() {
     for (let i = 0; i <= 200; i++) {
         console.log()
-
     }
 }
 
@@ -165,7 +164,6 @@ potencia = (b, e) => {
 // A inserção de números deve parar quando o usuário digitar o
 // número -1, e este número -1 não deve ser considerado nem como maior, 
 // nem como menor, e nem na contagem da média.
-
 /*
 ================================================
 ================================================
@@ -175,13 +173,57 @@ potencia = (b, e) => {
 ================================================
 ================================================
 */
+function numeros_reais() {
+    const readline = require('readline')
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.output
+    })
+    const numeros = []
+
+    function pergunta() {
+        rl.question(`Entre com número real (Digite -1 para sair): `, (entrada) => {
+
+            let num = parseFloat(entrada)
+            if (isNaN(num)) {
+                alert(`Iserir apenas números!!`)
+                return pergunta()
+            }
+            if (entrada === -1) {
+                rl.close()
+                if (numeros.length === 0) {
+                    alert(`Sem números inseridos`)
+                    return
+                }
+                const maior = Math.max(...numeros)
+                const menor = Math.min(...numeros)
+                const soma = numeros.reduce((total, valor => total + valor, 0))
+                const media = soma / numeros.length
+
+                console.log(`Maoir: ${maior}`)
+                console.log(`Menor: ${menor}`)
+                console.log(`Soma: ${soma}`)
+                console.log(`Média: ${media}`)
+                return
+                // =======================================================
+            }
+            numeros.push(num)
+            pergunta()
+        })
+    }
+    pergunta()
+}
+numeros_reais()
+
+
+
 
 // 13) Desenvolver um programa que imprima a tabuada de 3 a 6.
 tabuada_3_6 = () => {
     for (let t = 3; t <= 6; t++) {
         console.log(`Tabuada do ${t}: `)
         for (let i = 1; i <= 10; i++) {
-            console.log(`${t} x ${i} = ${t*i}`)
+            console.log(`${t} x ${i} = ${t * i}`)
         }
     }
 }
