@@ -24,7 +24,8 @@ is_nan = (valor) => {
         console.log(`Entrada inválida ""${valor}"" Informe apenas números`)
         rl.close()
         return true
-    }; return false;
+    }
+    return false
 }
 
 // 1) Elaborar um programa de computador que pergunte ao usuário o valor do Raio de um
@@ -36,13 +37,12 @@ calc_area = () => {
         rl.close()
     })
 }
-calc_area()
-
+// calc_area()
 // 2) Desenvolver um programa que calcule o salário líquido de um professor. Para elaborar o
 // programa, é necessário possuir alguns dados, tais como: Valor da hora aula, número de horas
 // trabalhadas no mês e percentual de desconto do INSS.
 sal_líq_prof = () => {
-    rl.question('Valor da hora aula: ?', (valorHoras) => {
+    rl.question('Valor da hora aula: ', (valorHoras) => {
         rl.question('Número de aulas trabalhadas: ', (horas) => {
             rl.question('Valor percentual (%) do desconto do INSS: ', (descInss) => {
                 const salLiquido = (valorHoras * horas) - ((valorHoras * horas) * (descInss / 100))
@@ -56,8 +56,6 @@ sal_líq_prof = () => {
 
 // 3) Fazer um programa que pergunte dois valores reais e apresente o primeiro com acréscimo
 // de 30% e o segundo com desconto de 25%.
-
-
 mostrar_percentual = () => {
     rl.question('Informe 1º número para mostrar acréscimo de 30%: ', (num1) => {
         const n1 = Number(num1)
@@ -118,15 +116,16 @@ media_ponderada = () => {
     })
 };
 // media_ponderada()
+
 // 5) Fazer um algoritmo que calcule e apresente o valor do volume de uma lata de óleo, 
 // utilizando a fórmula v = πr2h. Onde v=Volume, π = 3. 14159265, r = raio e h = altura.
 volume_lata = () => {
     rl.question('Qual altura em centímetros?', (altura) => {
         const valor_altura = Number(altura)
-        is_nan(valor_altura)
+        if (is_nan(valor_altura)) return rl.close()
         rl.question('Qual raio em centímetros?', (raio) => {
             const valor_raio = Number(raio)
-            is_nan(valor_raio)
+            if (is_nan(valor_raio)) return rl.close()
 
             const volume = ((3.14159265 * Math.pow(valor_raio, 2) * valor_altura) / 1000)
 
@@ -137,6 +136,7 @@ volume_lata = () => {
     })
 };
 // volume_lata()
+
 // 6) Fazer um algoritmo que pergunte dois valores a e b, efetue a troca dos valores, de forma que 
 // a variável "a" passe a possuir o valor da variável "b", e que a variável "b" passe a possuir o 
 // valor da variável "a", e apresente os valores trocados.
@@ -171,7 +171,6 @@ calculo_hipotenusa = () => {
         rl.question('Informe o valor do outro cateto?: ', (cat2) => {
             const valor_cat2 = cat2
             if (is_nan(valor_cat2)) return
-
 
             const hipotenusa = Math.sqrt(
                 (
@@ -216,7 +215,7 @@ perimetro_area_diag_triangulo = () => {
             const valor_altura = Number(altura)
             const perimetro = ((valor_base * 2) + (valor_altura * 2))
             const area = (valor_base * valor_altura)
-            const diagonal = Math.sqrt(Math.pow(valor_base, 2) + Math.pow(valor_altura,2))
+            const diagonal = Math.sqrt(Math.pow(valor_base, 2) + Math.pow(valor_altura, 2))
 
             console.log(`a) O perímetro deste retângulo: ${perimetro}\nb) A área deste retângulo: ${area}\nc) A diagonal deste retângulo: ${diagonal.toPrecision(2)}`);
             rl.close();
@@ -229,9 +228,9 @@ perimetro_area_diag_triangulo = () => {
 // termo. E apresente o 10º termo da série.
 pa_decimo_termo = () => {
     rl.question('Insira a razão de uma PA: ', (razao) => {
-        if(is_nan(razao)) return
-        rl.question('Insira o 1º termo: ', (first_term)=>{
-            if(is_nan(first_term)) return
+        if (is_nan(razao)) return
+        rl.question('Insira o 1º termo: ', (first_term) => {
+            if (is_nan(first_term)) return
             const valor_razao = Number(razao)
             const valor_first_term = Number(first_term)
             // an = a1 + (n - 1).r
@@ -244,7 +243,7 @@ pa_decimo_termo = () => {
 
             const decimo_termo = valor_first_term + (n - 1) * valor_razao
 
-            console.log('10º termo da PA: ',decimo_termo);
+            console.log('10º termo da PA: ', decimo_termo);
             rl.close();
         })
     })
@@ -255,24 +254,23 @@ pa_decimo_termo = () => {
 // termo. E apresente o 5º termo da série.
 pa_quinto_termo = () => {
     rl.question('Insira a razão de uma PA: ', (razao) => {
-        if(is_nan(razao)) return
-        rl.question('Insira o 1º termo: ', (first_term)=>{
-            if(is_nan(first_term)) return
+        if (is_nan(razao)) return
+        rl.question('Insira o 1º termo: ', (first_term) => {
+            if (is_nan(first_term)) return
             const valor_razao = Number(razao)
             const valor_first_term = Number(first_term)
-            // an = a1 + (n - 1).r
-            // an: termo que queremos calcular
-            // a1: primeiro termo da P.A.
-            // n: posição do termo que queremos descobrir
-            // r: razão
+            
+            // an = a1 + (n-1)r == net
+
+            // an = a1 * n^(n-1) == aula
 
             const n = Number(5)
 
-            const quinto_termo = valor_first_term + (n - 1) * valor_razao
+            const quinto_termo = valor_first_term * (valor_razao ** (n - 1))
 
-            console.log('5º termo da PA: ',quinto_termo);
+            console.log('5º termo da PA: ', quinto_termo)
             rl.close();
         })
     })
 };
-// pa_quinto_termo()
+pa_quinto_termo()
