@@ -122,9 +122,9 @@ exercicio_06 = () => {
 
     let diferenca;
 
-    if (entrada > entrada2 ) {
+    if (entrada > entrada2) {
         diferenca = entrada - entrada2
-    }else{
+    } else {
         diferenca = entrada2 - entrada
 
     }
@@ -145,9 +145,9 @@ exercicio_07 = () => {
 
     let diferenca;
 
-    if (entrada > entrada2 ) {
+    if (entrada > entrada2) {
         diferenca = entrada - entrada2
-    }else{
+    } else {
         diferenca = entrada2 - entrada
 
     }
@@ -171,17 +171,76 @@ exercicio_08 = () => {
 
 // 9) Desenvolver um programa que pergunte um número e exiba a informação de que ele é 
 // positivo, negativo ou nulo.
+exercicio_09 = () => {
+    let resposta09 = document.querySelector("#resposta-ex09")
+    const n = Number(prompt(`Informe um número: `))
+    if (isNaN(n)) {
+        alert(`Não é um número!!`)
+    }
+    if (n < 0) {
+        resposta09.textContent = `O valor  ${n} é negativo!!`
+    } else if (n > 0) {
+        resposta09.textContent = `O valor  ${n} é POSITIVO!!`
+    } else {
+        resposta09.textContent = `O valor ${n} é NULO!!`
+    }
+}
 
-
-// 10) Desenvolver um programa que pergunte dois números inteiros, e apresente como 
-// resultado se o segundo número informado é ou não um divisor do primeiro número 
+// 10) Desenvolver um programa que pergunte dois números inteiros, e apresente como
+// resultado se o segundo número informado é ou não um divisor do primeiro número
 // informado.
+exercicio_10 = () => {
+    let resposta10 = document.querySelector("#resposta-ex10")
+
+    const n = Number(prompt(`Informe um número`))
+    const n2 = Number(prompt(`Informe um número`))
+    if (n1 % n2 === 0) {
+        resposta10.textContent = `O valor ${n} é divisivel por ${n2}!!`
+    } else {
+        resposta10.textContent = `O valor ${n} não é divisivel por ${n2}!!`
+    }
+}
 
 
-// 11) Desenvolver um programa que pergunte um número de 3 casas e apresente como 
+
+// 11) Desenvolver um programa que pergunte um número de 3 casas e apresente como
 // resultado somente o algarismo das centenas.
+exercicio_11 = () => {
+    let resposta11 = document.querySelector("#resposta-ex11")
+    const n = Number(prompt("Digite um número com três digitos"))
 
-// 12) Desenvolver um programa que pergunte 5 números inteiros e identifique o maior número e 
+    let centena = Math.floor(n / 100)
+    resposta11.textContent = `O algaritmo da centena é ${centena}!!`
+
+}
+
+// 12) Desenvolver um programa que pergunte 5 números inteiros e identifique o maior número e
 // o menor número.
+exercicio_12 = () => {
+    let resposta12 = document.querySelector("#resposta-ex12")
+    const arr = []
+    for(let i = 0; i < 5; i++){
+        const numeros = Number(prompt(`Informe os números: `))
+        arr.push(numeros)
+    }
+    let maior = Number(Math.max(...arr))
+    let menor = Number(Math.min(...arr))
 
-// 13) Desenvolver um programa que pergunte 3 valores (variáveis a, b e c) e ao final apresenteos dispostos em ordem crescente.
+
+    resposta12.textContent = `Maior: ${maior} | Menor: ${menor}`
+}
+
+// 13) Desenvolver um programa que pergunte 3 valores (variáveis a, b e c) e ao final apresentos
+//  dispostos em ordem crescente.
+exercicio_13 = () => {
+    let resposta13 = document.querySelector("#resposta-ex13")
+    const numbers = []
+    
+    for(let i = 0; i < 3;i++){
+        let n = prompt(`Informe um número: `)
+        numbers.push(n)
+    }
+    let ordemCrescente = numbers.sort((x, y)=>  x - y)
+    resposta13.textContent = `Valores em ordem crescente: ${ordemCrescente}`
+    
+}
