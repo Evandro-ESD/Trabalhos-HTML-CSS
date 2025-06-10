@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhos HTML/CSS</title>
+</head>
+
+<body>
+    <header>
+        <h1>CURRÍCULO: Evandro dos Santos</h1>
+    </header>
+    <hr>
+    <main>
+        <section>
+            <h2>DADOS PESSOAIS</h2>
+            <p><strong>Rua: </strong>. Evaristo da Veiga, 78.</p>
+            <p><strong>Cidade: </strong>- Centro, Rio de Janeiro - RJ, 20031-040. </p>
+            <p><strong>Telefone: </strong> (21) 964169964</p>
+        </section>
+        <hr>
+        <section>
+            <h2>FORMAÇÃO ACADÊMICAS</h2>
+            <p><strong>Escola: </strong>. Evaristo da Veiga, 78.</p>
+            <p><strong>Duração: </strong>- Centro, Rio de Janeiro - RJ, 20031-040. </p>
+        </section>
+        <hr>
+        <section>
+            <h2>EXPERIÊNCIA PROFISSIONAL</h2>
+            <ul>
+                <li>Microsolft</li>
+                <li>Linox - Fedora</li>
+                <li>COrel Draw</li>
+            </ul>
+        </section>
+        <hr>
+
+    </main>
+
+
+    <script>
+        function addElemento() {
+            const rodape = document.createElement('footer')
+            const textRodaPe = `Rio de janeiro, ${new Date().toLocaleString()}`
+            rodape.innerText = textRodaPe
+            document.body.appendChild(rodape)
+        }
+        document.addEventListener('DOMContentLoaded', addElemento)
+    </script>
+</body>
+
+</html>
